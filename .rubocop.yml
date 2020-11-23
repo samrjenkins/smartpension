@@ -1,0 +1,14 @@
+AllCops:
+    NewCops: enable
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+Metrics/BlockLength:
+  Exclude:
+    - 'test/**/*.rb'
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required
+Style/Documentation:
+  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
