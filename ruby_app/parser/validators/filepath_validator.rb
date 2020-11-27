@@ -41,7 +41,7 @@ module Parser
     end
 
     def ensure_file_exists
-      return if File.exist?(Config.path_to_app_root << filepath.to_s)
+      return if File.exist?(filepath.to_s)
 
       errors << NO_FILE_EXIST_MSG
     end

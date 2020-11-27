@@ -4,7 +4,7 @@ require "minitest/autorun"
 require "pry"
 
 def fixture_path
-  "../test/fixtures/test.log"
+  "test/fixtures/test.log"
 end
 
 def mock(**stubs)

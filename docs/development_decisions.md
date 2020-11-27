@@ -1,6 +1,6 @@
 # Development decisions
 ## .log file parsing
-The bottleneck in this task appears to be the parsing of the log file. The file provided is \~500 lines. The items we sort for printing to the console only total 10. Therefore the sorting part of the task represents less computational time than the parsing of the log's lines. The file parsing appeared to be the area to focus on optimising.
+The bottleneck in this task appears to be the parsing of the log file. The file provided is 500 lines. The items we sort for printing to the console only total 10. Therefore the sorting part of the task represents less computational time than the parsing of the log's lines. The file parsing appeared to be the area to focus on optimising.
 
 I initially parsed the log file with `File.readlines`. However, reading around the method revealed that it loads the entire file into memory at once. This would be memory-intensive for larger file sizes. To ensure the programme is more scalable, I refactored to a `File.open.each` implementation which reads the file line-by-line.
 

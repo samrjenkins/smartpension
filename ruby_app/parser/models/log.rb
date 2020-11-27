@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "../../../config"
-
 module Parser
   class Log
     def initialize(file_path)
@@ -19,7 +17,7 @@ module Parser
     attr_reader :file_path
 
     def within_open_file(&block)
-      File.open("#{Config.path_to_app_root}#{file_path}", &block)
+      File.open(file_path.to_s, &block)
     end
   end
 end
